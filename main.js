@@ -19,3 +19,16 @@ function addNumsFromStr(array) {
 
   console.log(sum);
 }
+
+// Task 2...!
+let firstName = "Shivaprasad";
+
+function revAndLowerCase(str) {
+  let reversedStr = "";
+
+  for (let s = str.length - 1; s >= 0; s--) {
+    reversedStr += str[s];
+  }
+
+  console.log(reversedStr.toLowerCase());
+}
