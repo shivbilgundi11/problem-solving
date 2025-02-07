@@ -32,3 +32,20 @@ function revAndLowerCase(str) {
 
   console.log(reversedStr.toLowerCase());
 }
+
+// Task 3...!
+const numsInStr = ["1", "3", "44", "4", "3", "44", "4", "1", "3"];
+
+function removeDuplNToNums(numsArr) {
+  const numsRslt = [];
+
+  numsArr.forEach((val) => {
+    if (numsRslt.includes(parseInt(val))) {
+      return;
+    } else {
+      numsRslt.push(parseInt(val));
+    }
+  });
+
+  console.log(numsRslt);
+}
