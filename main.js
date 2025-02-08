@@ -49,3 +49,22 @@ function removeDuplNToNums(numsArr) {
 
   console.log(numsRslt);
 }
+
+// Task 4...!
+const message = "I am a Frontent Developer.";
+
+function replaceChars(str, char) {
+  let rsltStr = "";
+
+  for (let i = 0; i < message.length; i++) {
+    let currChar = str[i];
+
+    if (currChar.toLowerCase() === char.toLowerCase()) {
+      rsltStr += "#";
+    } else {
+      rsltStr += currChar;
+    }
+  }
+
+  console.log(rsltStr);
+}
