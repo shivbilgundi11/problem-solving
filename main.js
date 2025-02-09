@@ -68,3 +68,14 @@ function replaceChars(str, char) {
 
   console.log(rsltStr);
 }
+
+// Task 5...!
+let someStr = "dellboomi";
+
+function calChars(str) {
+  const rsltObj = {};
+  const chars = str.split("").map((val) => {
+    rsltObj[val] = (rsltObj[val] || 0) + 1;
+  });
+  console.log(rsltObj);
+}
