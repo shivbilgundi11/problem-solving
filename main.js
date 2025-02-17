@@ -94,3 +94,29 @@ function countChars(str, char) {
 
   console.log(`${char} appeared ${rsltObj[char]} times...!`);
 }
+
+// Task 7...!
+let randNum = "025868";
+
+function evenNumsDashed(str) {
+  const strToArr = str.split("");
+
+  let rsltStr = "";
+
+  strToArr.forEach((val, i, arr) => {
+    let currVal = val;
+    let nextVal = arr[i + 1];
+
+    if (currVal % 2 === 0 && nextVal % 2 === 0) {
+      rsltStr += currVal + "-";
+    } else {
+      if (arr[i + 1]) {
+        rsltStr += currVal + nextVal;
+      } else {
+        rsltStr += currVal;
+      }
+    }
+  });
+
+  console.log(rsltStr);
+}
