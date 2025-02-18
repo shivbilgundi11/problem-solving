@@ -120,3 +120,25 @@ function evenNumsDashed(str) {
 
   console.log(rsltStr);
 }
+
+// Task 8...!
+const numbers = [7, 3, 2, 4];
+
+function multNumsExpCurrVal(numsArr) {
+  const rsltArr = [];
+
+  numsArr.forEach((_, i, arr) => {
+    let prevMultNum = 1;
+    for (let j = 0; j < arr.length; j++) {
+      if (j === i) {
+        continue;
+      } else {
+        prevMultNum = prevMultNum * arr[j];
+      }
+    }
+
+    rsltArr.push(prevMultNum);
+  });
+
+  console.log(rsltArr);
+}
