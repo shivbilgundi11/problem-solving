@@ -142,3 +142,18 @@ function multNumsExpCurrVal(numsArr) {
 
   console.log(rsltArr);
 }
+
+// Task 9...!
+const palindromeString = "abba";
+
+function isPalindrome(str) {
+  let reversedStr = [];
+
+  str.split("").forEach((val) => reversedStr.unshift(val));
+
+  if (reversedStr.join("") === str) {
+    console.log("The String is Palindrome...");
+  } else {
+    console.log("The String is not Palindrome...!");
+  }
+}
