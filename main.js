@@ -157,3 +157,24 @@ function isPalindrome(str) {
     console.log("The String is not Palindrome...!");
   }
 }
+
+// Task 10...!
+function checkPrimeNum(num) {
+  let isPrime = true;
+  if (num <= 1) {
+    isPrime = false;
+  } else {
+    for (let i = 0; i < num / 2; i++) {
+      if (num % i === 0) {
+        isPrime = false;
+        break;
+      }
+    }
+  }
+
+  if (isPrime) {
+    console.log(`The ${num} is Prime Number.`);
+  } else {
+    console.log(`The ${num} is not Prime Number.`);
+  }
+}
