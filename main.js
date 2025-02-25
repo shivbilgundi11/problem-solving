@@ -178,3 +178,16 @@ function checkPrimeNum(num) {
     console.log(`The ${num} is not Prime Number.`);
   }
 }
+
+// Task 11...!
+function printRangeOfNums(rangeNum) {
+  if (rangeNum >= 0) {
+    for (let i = 0; i <= rangeNum; i++) {
+      console.log(i);
+    }
+  } else {
+    for (let i = rangeNum; i < 1; i++) {
+      console.log(i);
+    }
+  }
+}
