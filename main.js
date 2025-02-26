@@ -191,3 +191,32 @@ function printRangeOfNums(rangeNum) {
     }
   }
 }
+
+// Task 12...!
+const evensAndOdds = [2435, 982, 5642, 1232, 87, 1234567890];
+
+function addEvensAndOdds(numsArray) {
+  const resultArr = [];
+
+  numsArray.forEach((val) => {
+    const currNumArr = val.toString().split("");
+
+    const evens = [];
+    const odds = [];
+
+    currNumArr.forEach((num) => {
+      if (parseInt(num) % 2 === 0) {
+        evens.push(parseInt(num));
+      } else {
+        odds.push(parseInt(num));
+      }
+    });
+
+    let evenNum = evens.reduce((acc, num) => acc + num);
+    let oddNum = odds.reduce((acc, num) => acc + num);
+
+    resultArr.push(parseInt(evenNum.toString() + oddNum.toString()));
+  });
+
+  console.log(resultArr);
+}
