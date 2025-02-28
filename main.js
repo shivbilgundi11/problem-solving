@@ -220,3 +220,48 @@ function addEvensAndOdds(numsArray) {
 
   console.log(resultArr);
 }
+
+// Task 13...!
+const randomNums = [8, 59, 738, 9645, 87657, 123456789, 65743652532];
+
+function swappingNums(numsArr) {
+  const resultArr = [];
+
+  numsArr.forEach((val) => {
+    if (val.toString().length === 1) {
+      resultArr.push(parseInt(val + "0"));
+    } else if (val.toString().length === 2) {
+      let numInStr = val.toString();
+
+      resultArr.push(parseInt(numInStr[1] + numInStr[0]));
+    } else if (val.toString().length > 3 && val.toString().length < 5) {
+      let nums = val.toString().split("");
+
+      let reversedStr = nums[2] + nums[1] + nums[0] + nums[3];
+
+      resultArr.push(parseInt(reversedStr));
+    } else {
+      const numsInArr = val.toString().split("");
+
+      if (numsInArr.length % 2 === 0) {
+        let reverseNum = "";
+
+        for (let i = numsInArr.length - 1; i >= 0; i--) {
+          reverseNum += numsInArr[i];
+        }
+
+        resultArr.push(parseInt(reverseNum));
+      } else {
+        let reverseNum = "";
+
+        for (let i = numsInArr.length - 2; i >= 0; i--) {
+          reverseNum += numsInArr[i];
+        }
+
+        resultArr.push(parseInt(reverseNum + numsInArr[numsInArr.length - 1]));
+      }
+    }
+  });
+
+  console.log(resultArr);
+}
