@@ -265,3 +265,33 @@ function swappingNums(numsArr) {
 
   console.log(resultArr);
 }
+
+// Task 14...!
+function countNums() {
+  const numsArr = [];
+
+  for (let j = 0; j <= 1000; j++) {
+    numsArr.push(j);
+  }
+
+  // Let's count each NO appearrence...
+  const resultArr = [];
+
+  for (let i = 0; i < 10; i++) {
+    let currValCount = 0;
+
+    numsArr.forEach((num) => {
+      const numInStr = num.toString().split("");
+
+      numInStr.forEach((val) => {
+        if (val == i) {
+          currValCount += 1;
+        }
+      });
+    });
+
+    resultArr.push({ [i]: `${i} appeared ${currValCount} times...!` });
+  }
+
+  console.log(resultArr);
+}
