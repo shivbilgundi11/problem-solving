@@ -295,3 +295,22 @@ function countNums() {
 
   console.log(resultArr);
 }
+
+// Task 15...!
+const nums = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+
+function createSubArrays(subArrLength, arr) {
+  let arrLength = arr.length;
+  const givenArr = arr;
+
+  const resultArr = [];
+
+  for (let s = 0; s <= arrLength / subArrLength; s++) {
+    resultArr.push(givenArr.slice(0, subArrLength));
+    for (let j = 0; j < subArrLength; j++) {
+      givenArr.shift();
+    }
+  }
+
+  console.log(resultArr);
+}
