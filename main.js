@@ -314,3 +314,26 @@ function createSubArrays(subArrLength, arr) {
 
   console.log(resultArr);
 }
+
+// Task 16...!
+let vowelsString =
+  "Apple fruit is very good for health. An apple a day keeps doctor away...!";
+
+function countVowels(vowelStr) {
+  let vowelCount = 0;
+  let strLength = vowelStr.length;
+
+  for (let k = 0; k < strLength; k++) {
+    if (
+      vowelStr[k].toLowerCase() === "a" ||
+      vowelStr[k].toLowerCase() === "e" ||
+      vowelStr[k].toLowerCase() === "i" ||
+      vowelStr[k].toLowerCase() === "o" ||
+      vowelStr[k].toLowerCase() === "u"
+    ) {
+      vowelCount++;
+    }
+  }
+
+  console.log(`The totals vowels in the given string are ${vowelCount}`);
+}
