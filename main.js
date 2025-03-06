@@ -337,3 +337,23 @@ function countVowels(vowelStr) {
 
   console.log(`The totals vowels in the given string are ${vowelCount}`);
 }
+
+// Task 17...!
+let isPalindromeStr = "madam";
+
+function checkStrIsPalindrome(str) {
+  let strLength = str.length;
+  let isPalindrome = false;
+
+  for (let p = 0; p < Math.floor(strLength / 2); p++) {
+    if (str[p] === str[strLength - 1 - p]) {
+      isPalindrome = true;
+    } else {
+      isPalindrome = false;
+    }
+  }
+
+  isPalindrome
+    ? console.log("The string is Palindrome.")
+    : console.log("The string is not Palindrome");
+}
