@@ -357,3 +357,30 @@ function checkStrIsPalindrome(str) {
     ? console.log("The string is Palindrome.")
     : console.log("The string is not Palindrome");
 }
+
+// Task 18...!
+const largeSmallNums = [
+  23, 636, 1, 23, 56, 6, -4, -34, 84, 65, 867345, 54, 39, -67, 3, 34, 12, 21,
+];
+
+function findLowAndLargNum(numsArr) {
+  let maxNum = 0;
+  let minNum = 0;
+
+  numsArr.forEach((num) => {
+    if (num > maxNum) {
+      maxNum = num;
+    }
+  });
+
+  numsArr.forEach((num) => {
+    if (num < minNum) {
+      minNum = num;
+    }
+  });
+
+  console.log({
+    minNum: minNum,
+    maxNum: maxNum,
+  });
+}
