@@ -384,3 +384,33 @@ function findLowAndLargNum(numsArr) {
     maxNum: maxNum,
   });
 }
+
+// Task 19...!
+const posiAndNegaNums = [12, -7, 5, 8, -10, 20];
+
+function removeNegaNumsAndTrans(nums) {
+  const positiveNums = [];
+
+  // Removing -ve's
+  nums.forEach((num) => {
+    if (num >= 0) {
+      positiveNums.push(num);
+    }
+  });
+
+  // Doubling Numbers
+  const numsDoubled = positiveNums.map((number) => number * 2);
+
+  // Check if all are even!
+  const result = numsDoubled.every((val) => {
+    if (val % 2 === 0) {
+      return val;
+    }
+  });
+
+  if (result) {
+    console.log(numsDoubled.reduce((acc, currNum) => acc + currNum));
+  } else {
+    console.log(null);
+  }
+}
