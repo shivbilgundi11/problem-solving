@@ -414,3 +414,20 @@ function removeNegaNumsAndTrans(nums) {
     console.log(null);
   }
 }
+
+// Task 20...!
+const someNums = [6, 2, 7, 11, 5, 45, 49];
+
+function findNumsTarget(target, nums) {
+  const result = [];
+
+  nums.forEach((val) => {
+    nums.forEach((num) => {
+      if (val + num === target) {
+        result.push([val, num]);
+      }
+    });
+  });
+
+  console.log("The possible combinations are: ", result);
+}
