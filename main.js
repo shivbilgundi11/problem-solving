@@ -431,3 +431,27 @@ function findNumsTarget(target, nums) {
 
   console.log("The possible combinations are: ", result);
 }
+
+// Task 21...!
+let sortStr = "aaabbbebcccccddeeeeddeeeeee";
+
+function sortMostChars(str) {
+  // Chars. Counts
+  const charsCount = {};
+
+  str.split("").forEach((char) => {
+    charsCount[char] = (charsCount[char] || 0) + 1;
+  });
+
+  // Sort Obj.
+  const sortedChars = Object.entries(charsCount).sort((a, b) => b[1] - a[1]);
+
+  let resultStr = "";
+
+  sortedChars.forEach((arr) => {
+    let str = arr[0];
+    resultStr += str.repeat(arr[1]);
+  });
+
+  console.log("The sorted string is: ", resultStr);
+}
