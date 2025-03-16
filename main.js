@@ -455,3 +455,59 @@ function sortMostChars(str) {
 
   console.log("The sorted string is: ", resultStr);
 }
+
+// Task 22...!
+const orders = [
+  {
+    orderId: 101,
+    customer: "Mahesh",
+    items: [
+      { name: "Laptop", quantity: 1 },
+      { name: "Mouse", quantity: 2 },
+    ],
+    totalAmount: 1200,
+  },
+  {
+    orderId: 102,
+    customer: "TATA",
+    items: [
+      { name: "Keyboard", quantity: 1 },
+      { name: "Monitor", quantity: 1 },
+    ],
+    totalAmount: 400,
+  },
+  {
+    orderId: 103,
+    customer: "Mahesh",
+    items: [
+      { name: "Headphones", quantity: 2 },
+      { name: "Charger", quantity: 1 },
+    ],
+    totalAmount: 150,
+  },
+  {
+    orderId: 104,
+    customer: "Maruthi",
+    items: [
+      { name: "Phone", quantity: 1 },
+      { name: "Cover", quantity: 2 },
+    ],
+    totalAmount: 800,
+  },
+];
+
+function getCustomerOrderSummary(data) {
+  const results = {};
+
+  data.forEach(({ customer, items }) => {
+    if (!results[customer]) {
+      results[customer] = { name: customer, totalQuantity: 0 };
+    }
+
+    items.forEach(({ quantity }) => {
+      results[customer].totalQuantity += quantity;
+    });
+  });
+
+  return results;
+}
