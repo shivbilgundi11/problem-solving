@@ -511,3 +511,40 @@ function getCustomerOrderSummary(data) {
 
   return results;
 }
+
+// Task 23...!
+const departsSalary = [
+  { name: "Alice", department: "IT", salary: 70000 },
+
+  { name: "Bob", department: "HR", salary: 50000 },
+
+  { name: "Charlie", department: "IT", salary: 90000 },
+
+  { name: "David", department: "Finance", salary: 60000 },
+
+  { name: "Eve", department: "HR", salary: 55000 },
+
+  { name: "Frank", department: "Finance", salary: 75000 },
+];
+
+function getMaxSalaryOfEachDepart(data) {
+  const results = {};
+
+  data.forEach(({ name, department, salary }) => {
+    if (!results[department]) {
+      results[department] = {
+        name: name,
+        department: department,
+        salary: 0,
+      };
+    }
+  });
+
+  data.forEach(({ department, salary }) => {
+    if (results[department].salary < salary) {
+      results[department].salary = salary;
+    }
+  });
+
+  return results;
+}
