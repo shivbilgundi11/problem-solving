@@ -548,3 +548,18 @@ function getMaxSalaryOfEachDepart(data) {
 
   return results;
 }
+
+// Task 24...!
+const arrayofNums = [1, 2, 3, 4, 3, 2, 5, 6, 7, 4, 5];
+
+function removeDuplecatesFromArr(array) {
+  const resultArr = [];
+
+  array.forEach((val) => {
+    if (!resultArr.includes(val)) {
+      resultArr.push(val);
+    }
+  });
+
+  return resultArr;
+}
